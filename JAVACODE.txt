@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    tools:context="com.example.alvinnovendra.smplcalculate.MainActivity">
+
+    <EditText
+        android:id="@+id/angka1"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="right"
+        android:hint="Input Angka"
+        android:inputType="number"
+        android:maxLength="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btn_tambah"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="buttonTambah"
+        android:text="+"
+        android:layout_below="@+id/angka1" />
+
+    <Button
+        android:id="@+id/btn_kurang"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/angka1"
+        android:layout_toRightOf="@id/btn_tambah"
+        android:onClick="buttonKurang"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/btn_kali"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/angka1"
+        android:layout_toRightOf="@id/btn_kurang"
+        android:onClick="buttonKali"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/btn_bagi"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/angka1"
+        android:layout_toRightOf="@id/btn_kali"
+        android:onClick="buttonBagi"
+        android:text="/" />
+
+    <TextView
+        android:id="@+id/tv_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/angka1"
+        android:text="+"
+        android:textSize="40sp" />
+
+
+    <EditText
+        android:id="@+id/angka2"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@+id/btn_tambah"
+        android:layout_marginTop="78dp"
+        android:layout_toLeftOf="@+id/tv_operator"
+        android:layout_toStartOf="@+id/tv_operator"
+        android:gravity="right"
+        android:hint="Input Angka"
+        android:inputType="number"
+        android:maxLength="10" />
+
+    <TextView
+        android:id="@+id/sama_dengan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/angka2"
+        android:text="="
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/sama_dengan"
+        android:text="0"
+        android:textSize="48sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="buttonProses"
+        android:text="Hasil" />
+
+</RelativeLayout>
